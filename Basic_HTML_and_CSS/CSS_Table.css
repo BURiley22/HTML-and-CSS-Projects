@@ -1,0 +1,14 @@
+table {
+	background-color: black;
+	color: orange;
+}
+
+table {border: 4px ridge;
+}
+
+table:hover {
+	background-color: grey;
+	color: red;
+}
+
+
