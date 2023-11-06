@@ -3,8 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./CSS/one_page_website.css"> 
-	<title></title>
+	<link rel="stylesheet" href="CSS/one_page_website.css"> 
+	<script src="JS/one_page_website.js" defer></script>
+	<title>Trees of Oregon</title>
 </head>
 <body>
 	<header>
@@ -33,76 +34,76 @@
 	</div>
 	<!--END HOME-->
 
-	<!--PHOTOS-->
-	<section>
-		<div id="photo">
-			<h1>PHOTOS</h1>
-			<div>
+	<!--Images to be used by the Lightbox-->
+	<div class="row">
+		<div class="column">
+			<img src="images/bigleafMapleThumb.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="images/cedarLebanon Thumb.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="images/dougFirThumb.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="images/oreWhiteOak Thumb.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+		</div>
+	</div>
 
-				<!--PHOTO-CONTAINER 1-->
-				<div>
-					<div>
-						<img src="./images/atlasCedar.png" alt="Atlas Cedar">
-						<div>
-							<h3>Atlas Cedar</h3>
-							<p>Cedrus atlantica</p>
-						</div>
-					</div>
-				</div>
-				<!--END PHOTO CONTAINER 1-->
+	<!-----The Lightbox------------>
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
 
-				<!--PHOTO-CONTAINER 2-->
-				<div>
-					<div>
-						<img src="./images/bigleafMaple.png" alt="Bigleaf Maple">
-						<div>
-							<h3>Bigleaf Maple</h3>
-							<p>Acer macrophyllum</p>
-						</div>
-					</div>
-				</div>
-				<!--END PHOTO CONTAINER 2-->
+			<div class="mySlides">
+				<div class="numbertext">1 / 4</div>
+				<img src="images/bigleafMaple.jpeg" style="width: 100%">
+			</div>
 
-				<!--PHOTO-CONTAINER 3-->
-				<div>
-					<div>
-						<img src="./images/cedarLebanon.png" alt="Cedar of Lebanon">
-						<div>
-							<h3>Cedar of Lebanon</h3>
-							<p>Cedrus libani</p>
-						</div>
-					</div>
-				</div>
-				<!--END PHOTO CONTAINER 3-->
+			<div class="mySlides">
+				<div class="numbertext">2 / 4</div>
+				<img src="images/cedarLebanon.png" style="width: 100%">
+			</div>
 
-				<!--PHOTO-CONTAINER 4-->
-				<div>
-					<div>
-						<img src="./images/dougFir.png" alt="Douglas-fir">
-						<div>
-							<h3>Douglas-fir</h3>
-							<p>Pseudotsuga menziesii</p>
-						</div>
-					</div>
-				</div>
-				<!--END PHOTO CONTAINER 4-->
+			<div class="mySlides">
+				<div class="numbertext">3 / 4</div>
+				<img src="images/dougFir.png" style="width: 100%">
+			</div>
 
-				<!--PHOTO-CONTAINER 5-->
-				<div>
-					<div>
-						<img src="./images/oreWhiteOak.png" alt="Oregon White Oak">
-						<div>
-							<h3>Oregon White Oak</h3>
-							<p>Quercus garryana</p>
-						</div>
-					</div>
-				</div>
-				<!--END PHOTO CONTAINER 5-->
+			<div class="mySlides">
+				<div class="numbertext">3 / 4</div>
+				<img src="images/oreWhiteOak.png" style="width: 100%">
+			</div>
 
-			</div>	
+			<!---Next & Previous Buttons------>
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			<!-----Captions for Images------------>
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+
+			<!------Thumbnail Image Controls----------->
+
+			<div class="column">
+				<img class="demo" src="images/bigleafMapleThumb.png" onclick="currentSlide(1)" alt="Big Leaf Maple">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="images/cedarLebanon Thumb.png" onclick="currentSlide(2)" alt="Cedar of Lebanon">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="images/dougFirThumb.png" onclick="currentSlide(3)" alt="Douglas fir">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="images/oreWhiteOak Thumb.png" onclick="currentSlide(4)" alt="Oregon White Oak">
+			</div>
 		</div>	
-	</section>
-		<!--END GALLERY-->
+	</div>
 
 		<!--VIDEOS-->
 		<section>
